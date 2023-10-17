@@ -4,8 +4,9 @@ Emily Bartman, Joseph Shepherd, and Alexander Schmig
 # Project Description: 
 ## Objectives
 Our problem is that movie ratings are too retroactive. We will create a dependable movie ratings prediction model to set movie makers’ and audience members' expectations upon the release of a new film, before the critics.
+
 ## Usefulness
-This application will be useful for two primary reasons: (1) rating expectations impact film financing, and (2) rating expectations impact audience willingness to attend.  While researching some applications showed current ratings like RottenTomatoes, IMDb, and Metacritic, but they do not show predictions of movie ratings. However, there were many articles about utilizing prediction models with no application being created to interact with and allow usage of the models. Below are some of these articles: 
+This application will be useful for two primary reasons: (1) rating expectations impact film financing, and (2) rating expectations impact audience willingness to attend.  While researching current movie rating applications, most showed current ratings like RottenTomatoes, IMDb, and Metacritic created by viewers, but do not show predictions of movie ratings created by prediction models. However, there were many articles about utilizing prediction models with no application being created to interact with and allow usage of the models. Below are some of these articles: 
 
 - [New Tomatometer Scores: Latest Ratings on Movies and Shows | Rotten Tomatoes](https://editorial.rottentomatoes.com/article/tomatometer-scores/)
 - [Predict Movie Rating | Data Science Blog (nycdatascience.com)](https://nycdatascience.com/blog/student-works/web-scraping/movie-rating-prediction/)
@@ -18,10 +19,10 @@ This application will be useful for two primary reasons: (1) rating expectations
 - [26260680.pdf (stanford.edu)](https://cs229.stanford.edu/proj2019aut/data/assignment_308832_raw/26260680.pdf)
 - [Predicting Movie Ratings with Machine Learning Algorithms | SpringerLink](https://link.springer.com/chapter/10.1007/978-3-030-51156-2_125)
 
-Based on an initial purview of the market, it appears this is a niche gap of prior research and theory being made available but lacking application, especially in the publicly accessible domain. As such, this is a good opportunity to corner the market and create a publicly accessible page wherein anyone can not only see your theory but perform live interactions with our model and predict future ratings for upcoming films. Our application’s target audience are the groups that benefit the most from a rating prediction tool: filmmakers, cinema owners, streaming service owners, and premier viewers. These stakeholders will find the most benefit out of the tool as they can gain both cost savings and funding based on the predictions gained from our application.
+Based on an initial purview of the market, it appears this is a niche gap of prior research and theory being made available but lacking real-world application, especially in the publicly accessible domain. As such, this is a good opportunity to corner the market and create a publicly accessible page wherein anyone can not only see your theory but perform live interactions with our model and predict future ratings for upcoming films. Our application’s target audience contains the groups that benefit the most from a rating prediction tool: filmmakers, cinema owners, streaming service owners, and premier viewers. These stakeholders will find the most benefit out of the tool as they can gain both cost savings and funding based on the predictions gained from our application.
 
 ## Dataset
-The dataset chosen for our model is public domain licensed from IMDB by web scaping and posted on Kaggle.com 3 years ago by Harhit Sankhdhar. It appears to have been posted for the purposes of public experimentation of the data, but no explicit purpose was posted by Harhit Sankhdhar.
+The dataset chosen for our model is public domain licensed from IMDB by web scraping and posted on Kaggle.com 3 years ago by Harhit Sankhdhar. It appears to have been posted for the purposes of public experimentation of the data, but no explicit purpose was included with the dataset.
 
 **Name:** IMDB Movies Dataset
 
@@ -33,9 +34,9 @@ The dataset chosen for our model is public domain licensed from IMDB by web scap
 
 **Date:** Feb 01, 2021
 
-**URL:** IMDb Dataset of the Top 1000 Movies & TV Shows 
+**URL:** [IMDb Dataset of the Top 1000 Movies & TV Shows ](https://www.kaggle.com/datasets/harshitshankhdhar/imdb-dataset-of-top-1000-movies-and-tv-shows)
 
-Our initial data summary was performed in Google Colab. The summary shows the data set to have the following characteristics: 
+Our initial data summary was performed in [Google Colab](https://colab.research.google.com/drive/12tohs0uisfzyGIftprB9KUNOH7K32a7x?usp=sharing). The summary shows the dataset to have the following characteristics:
 
 - Shaped: (1000, 16)						 
 
@@ -90,12 +91,12 @@ Our initial data summary was performed in Google Colab. The summary shows the da
       Gross 			169
 
 
-Based on these initial findings, we find that cleaning of the data will be necessary because there are missing values, and most field types are object. To clean the data, we plan to primarily utilize the removal of the rows containing the missing data as the dataset is large enough to handle this method.
+Based on these initial findings, we find that cleaning of the data will be necessary because there are missing values, and most field types are object. To clean the data, we plan to primarily utilize the removal of the rows containing the missing data as the dataset is large enough to handle this method. We will then also consider converting many value fields to quantitative values that can better be interpreted into future models. 
 
 ## Functionalities
 Our application will perform a range of data science functions and user interactions. The data science functions include statistical analysis performed on the sample data, visualizations of the data, predictive models used, and training recommendations for continued exploratory analysis with our tool. This will allow us to not only build up our ethos as authorities in this area but also share insight into the Data Science methodologies acquired in this course. 
 
-Furthermore, our application's true value and differentiator in the market is the area for user interactions. The user interactions area of the application will allow the user to enter information about the movie and get a prediction on the rating based on the model chosen. Further user interactions that we may consider exploring are giving the user the ability to train the model on their own dataset and run predictions in parallel for comparison.
+Furthermore, our application's true value and differentiator in the market is the area for user interactions. The user interactions area of the application will allow the user to enter information about the movie and get a prediction on the rating based on the model chosen. Further user interactions that we may consider exploring are giving the user the ability to train the model on their own dataset and running predictions in parallel for comparison.
 
 To support the ambitions of this project, we will need to further explore the available options for web app technology. However, our team is most experienced with Python, so we plan to focus on efforts around Streamlit and Firebase. We plan to get more hands-on experience in the following weeks on the two technologies before making a final decision. 
 
@@ -115,7 +116,7 @@ https://github.com/EmilyBartman/ADS_Group4_Final_Project_Repo
 
 **Team Member:** Emily Bartman
 
-- **Contribution:** My contribution during the planning stage (Part 1) was setting up and participating in our WhatsApp group and Zoom meetings, creating the GitHub Repo, drafting the Final Project Proposal doc, uploading the read.me file, and reviewing the submission. 
+- **Contribution:** My contribution during the planning stage (Part 1) was setting up and participating in our WhatsApp group and Zoom meetings, creating the GitHub Repo, drafting the Final Project Proposal doc, uploading the read.me file, and reviewing the submission.  
 
 **Team Member:** Joseph Shepherd
 
