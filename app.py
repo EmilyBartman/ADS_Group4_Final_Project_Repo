@@ -9,5 +9,5 @@ print("Hello world!")
 
 df = pd.read_csv('imdb_top_1000.csv')
 
-print(df)
+print(df) 
 #test
