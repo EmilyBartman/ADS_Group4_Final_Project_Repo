@@ -35,5 +35,7 @@ st.markdown('While researching current movie rating applications, most showed cu
 st.header('Data Statistics')
 st.write(df.describe())
 
+
 st.header('Data Head')
 st.write(df.head())
+
