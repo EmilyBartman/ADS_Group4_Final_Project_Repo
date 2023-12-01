@@ -18,8 +18,6 @@ def main():
 
     #getting the dropdown values
     df = df.dropna()
-    release_year = df['Released_Year'].unique()
-    release_year = np.sort(release_year)
     genres = df.Genre.replace({', ':','},regex=True)
     genres = genres.str.split(',').explode('Genre')
     genres = np.unique(genres)
@@ -49,7 +47,7 @@ def main():
     st.header('Data Head')
     st.write(df.head())
 
-    release_selection = st.selectbox("Select the release year:", release_year)
+    release_selection = st.number_input("Select the release year:", step=1, min_value=1920, max_value=2050)
     runtime_selection = st.number_input("Enter the duration in minutes:", runtime)
     genre_selection = st.multiselect("Select the genres:", genres, placeholder="eg Action, Adventure")
     director_selection = st.selectbox("Select the director:", director)
@@ -73,6 +71,11 @@ def main():
             star4 = ''
         elif len(star_selection) == 1:
             star1 = star_selection[0]
+            star2 = ''
+            star3 = ''
+            star4 = ''
+        elif len(star_selection) == 0:
+            star1 = ''
             star2 = ''
             star3 = ''
             star4 = ''
@@ -101,20 +104,20 @@ def main():
         prediction_data = prediction_data.values.reshape(1, -1)
         d = d.drop(d.index[-1])
 
-        print(prediction_data, "\n", d)
-
-        training_columns = ['Director', 'Genre', 'Released_Year', 'Runtime', 'Star1', 'Star2', 'Star3', 'Star4']
+        training_columns = ['Released_Year', 'Runtime', 'Genre', 'Director', 'Star1', 'Star2', 'Star3', 'Star4']
         y = d['IMDB_Rating']
         x = d[training_columns]
+        sc = StandardScaler()
+        x = sc.fit_transform(x)
+        prediction_data = sc.transform(prediction_data)
 
         model = LinearRegression()
 
         # Train the model on the training set
         model.fit(x, y)
-        print(prediction_data)
         predictions = model.predict(prediction_data)
 
-        st.success(predictions)
+        st.success(predictions.round(2))
 
 if __name__ == "__main__":
     main()
