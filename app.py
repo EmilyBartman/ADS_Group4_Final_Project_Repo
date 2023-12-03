@@ -38,11 +38,11 @@ def main():
     
     st.markdown('Welcome to the Movie Rating Predictor Application: the proactive approach to predicting your movies’ audience ratings before the critics!')
     
-    st.markdown('The problem is that movie ratings are too retroactive. We will create a dependable movie ratings prediction model to set movie makers’ and audience members\' expectations upon the release of a new film, before the critics.')
+    st.markdown('The problem is that movie ratings are too retroactive. We have created a dependable movie ratings prediction model to set movie makers’ and audience members\' expectations upon the release of a new film, before the critics.')
     st.markdown('This application will be useful for two primary reasons: \n\n\t\t(1) rating expectations impact film financing, and \n\t(2) rating expectations impact audience willingness to attend.')
     st.markdown('While researching current movie rating applications, most showed current ratings like RottenTomatoes, IMDb, and Metacritic created by viewers, but do not show predictions of movie ratings created by prediction models. However, there were many articles about utilizing prediction models with no application being created to interact with and allow usage of the models. That is where we come in!')
 
-    st.header('Model Data Source & Head')
+    st.header('Model Data Source & Sample')
     st.markdown('Name: IMDB Movies Dataset')
     st.markdown('Owner: HARSHIT SHANKHDHAR ')
     st.markdown('Sourced: IMDb ')
@@ -54,6 +54,7 @@ def main():
 
     st.header('Data Statistics')
     st.write(df.describe())
+    st.write(df.plot.hexbin(x='Runtime', y='IMDB_Rating'))
     st.markdown('Based on model analysis using SSE and MSE scores, we have employed a Linear Regression model trained on the IMDB dataset to the backend of our application.') 
     st.markdown('Review findings by visiting https://colab.research.google.com/drive/1eXeMPPkGnWUJ5szIomcrde-Ouv7XAdOr?usp=sharing')
 
