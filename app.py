@@ -39,8 +39,8 @@ def main():
     st.markdown('Welcome to the Movie Rating Predictor Application: the proactive approach to predicting your movies’ audience ratings before the critics!')
     
     st.markdown('The problem is that movie ratings are too retroactive. We have created a dependable movie ratings prediction model to set movie makers’ and audience members\' expectations upon the release of a new film, before the critics.')
-    st.markdown('This application will be useful for two primary reasons: \n\n\t\t(1) rating expectations impact film financing, and \n\t(2) rating expectations impact audience willingness to attend.')
-    st.markdown('While researching current movie rating applications, most showed current ratings like RottenTomatoes, IMDb, and Metacritic created by viewers, but do not show predictions of movie ratings created by prediction models. However, there were many articles about utilizing prediction models with no application being created to interact with and allow usage of the models. That is where we come in!')
+    st.markdown('This application is useful for two primary reasons: \n\n\t\t(1) rating expectations impact film financing, and \n\t(2) rating expectations impact audience willingness to attend.')
+    st.markdown('While researching current movie rating applications, most showed current ratings like RottenTomatoes, IMDb, and Metacritic created by viewers, but do not show predictions of movie ratings created by prediction models. However, there were many articles about utilizing prediction models with no application being created to interact with and allow usage of the models. That is where we come in! We put action to theory and let you interact with it.')
 
     st.header('Model Data Source & Sample')
     st.markdown('Name: IMDB Movies Dataset')
@@ -53,12 +53,12 @@ def main():
 
     st.header('Data Statistics')
     st.write(df.describe())
-    st.markdown('Based on model analysis using SSE and MSE scores, we have employed a Linear Regression model trained on the IMDB dataset to the backend of our application.') 
+    st.markdown('Based on model analysis of this data using SSE and MSE scores, we have employed a Linear Regression model trained on the IMDB dataset to the backend of this application.') 
     st.markdown('Review findings by visiting https://colab.research.google.com/drive/1eXeMPPkGnWUJ5szIomcrde-Ouv7XAdOr?usp=sharing')
 
     st.header('Instructions and Disclaimer')  
     st.write('Please fill in the fields below with your film information and submit to generate your rating prediction using the trained Linear Regression model.')
-    st.write('Note: The model was trained off free publicly available data scraped from IMDB in 2021 and rating predictions may slightly differ from critic and audience ratings. This tool is only meant to be a free tool to assist in setting expectations and does not guarantee anything.') 
+    st.write('Note: The model was trained off free publicly available data scraped from IMDB in 2021 and rating predictions may slightly differ from actual critic and audience ratings. Predictions are not guarantees of actual ratings.') 
 
     release_selection = st.number_input("Select the release year:", step=1, min_value=1920, max_value=2050)
     runtime_selection = st.number_input("Enter the duration in minutes:", runtime)
