@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import os
 from sklearn.linear_model import LinearRegression
-import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 print(os.listdir(os.curdir))
@@ -23,9 +22,14 @@ def main():
     genres = np.unique(genres)
     director = df["Director"].unique()
     director = np.sort(director)
-    stars = df["Star1"].append(df["Star2"])
-    stars = stars.append(df["Star3"])
-    stars = stars.append(df["Star4"]).unique()
+
+    stars = df["Star1"].str.cat(df[["Star2", "Star3", "Star4"]].astype(str), sep=" ")
+
+    #stars = df["Star1"].append(df["Star2"])
+    #stars = stars.append(df["Star3"])
+    #stars = stars.append(df["Star4"]).unique()
+
+    stars = stars.unique()
     stars = np.sort(stars)
 
     runtime = 0
