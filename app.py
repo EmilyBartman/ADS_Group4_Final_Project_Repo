@@ -42,9 +42,6 @@ def main():
     st.markdown('This application will be useful for two primary reasons: \n\n\t\t(1) rating expectations impact film financing, and \n\t(2) rating expectations impact audience willingness to attend.')
     st.markdown('While researching current movie rating applications, most showed current ratings like RottenTomatoes, IMDb, and Metacritic created by viewers, but do not show predictions of movie ratings created by prediction models. However, there were many articles about utilizing prediction models with no application being created to interact with and allow usage of the models. That is where we come in!')
 
-    st.header('Data Statistics')
-    st.write(df.describe())
-
     st.header('Model Data Source & Head')
     st.markdown('Name: IMDB Movies Dataset')
     st.markdown('Owner: HARSHIT SHANKHDHAR ')
@@ -53,6 +50,16 @@ def main():
     st.markdown('Date: Feb 01, 2021') 
     st.markdown('URL: https://www.kaggle.com/datasets/harshitshankhdhar/imdb-dataset-of-top-1000-movies-and-tv-shows')
     st.write(df.head())
+
+
+    st.header('Data Statistics')
+    st.write(df.describe())
+    st.write(df.plot.hexbin(x='Runtime', y='IMDB_Rating', gridsize=15)
+    st.markdown('Based on a comparative analysis using SSE and MSE scores to decide on the backend predictive model, we have employed a Linear Regression model trained on the IMDB dataset on the backend of our application to predict your film's rating. To review our findings and see all of the work mentioned above, visit https://colab.research.google.com/drive/1eXeMPPkGnWUJ5szIomcrde-Ouv7XAdOr?usp=sharing')
+
+    st.header('Instructions and Disclaimer')  
+    st.write('Please input the following information below and we will use our trained Linear Regression model to predict your film’s rating.')
+    st.write('Note: The model was trained off free publicly available data scraped from IMDB in 2021 and rating predictions may slightly differ from critic and audience ratings. This tool is only meant to be a free tool to assist in setting expectations and does not guarantee anything.') 
 
     release_selection = st.number_input("Select the release year:", step=1, min_value=1920, max_value=2050)
     runtime_selection = st.number_input("Enter the duration in minutes:", runtime)
