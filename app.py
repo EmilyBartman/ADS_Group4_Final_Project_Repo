@@ -54,7 +54,6 @@ def main():
 
     st.header('Data Statistics')
     st.write(df.describe())
-    st.write(df.plot.hexbin(x='Runtime', y='IMDB_Rating'))
     st.markdown('Based on model analysis using SSE and MSE scores, we have employed a Linear Regression model trained on the IMDB dataset to the backend of our application.') 
     st.markdown('Review findings by visiting https://colab.research.google.com/drive/1eXeMPPkGnWUJ5szIomcrde-Ouv7XAdOr?usp=sharing')
 
