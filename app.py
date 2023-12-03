@@ -45,8 +45,13 @@ def main():
     st.header('Data Statistics')
     st.write(df.describe())
 
-    st.header('Data Head')
-    st.markdown('Name: IMDB Movies Dataset\n Owner: HARSHIT SHANKHDHAR \n Sourced: IMDb \n Stored: Kaggle.com \n Date: Feb 01, 2021 \n URL: IMDb Dataset of the Top 1000 Movies & TV Shows')
+    st.header('Model Data Source & Head')
+    st.markdown('Name: IMDB Movies Dataset')
+    st.markdown('Owner: HARSHIT SHANKHDHAR ')
+    st.markdown('Sourced: IMDb ')
+    st.markdown('Stored: Kaggle.com ')
+    st.markdown('Date: Feb 01, 2021') 
+    st.markdown('URL: https://www.kaggle.com/datasets/harshitshankhdhar/imdb-dataset-of-top-1000-movies-and-tv-shows')
     st.write(df.head())
 
     release_selection = st.number_input("Select the release year:", step=1, min_value=1920, max_value=2050)
