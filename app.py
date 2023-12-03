@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import os
 from sklearn.linear_model import LinearRegression
+import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 print(os.listdir(os.curdir))
@@ -23,13 +24,7 @@ def main():
     director = df["Director"].unique()
     director = np.sort(director)
 
-    stars = df["Star1"].str.cat(df[["Star2", "Star3", "Star4"]].astype(str), sep=" ")
-
-    #stars = df["Star1"].append(df["Star2"])
-    #stars = stars.append(df["Star3"])
-    #stars = stars.append(df["Star4"]).unique()
-
-    stars = stars.unique()
+    stars = pd.Series(pd.concat([df['Star1'], df['Star2'], df['Star3'], df['Star4']]).unique())
     stars = np.sort(stars)
 
     runtime = 0
@@ -86,7 +81,7 @@ def main():
         genre_input = ' '.join(genre_selection)
 
         prediction_data = [release_selection, runtime_selection, genre_input, director_selection, star1, star2, star3, star4, tobedropped]
-        prediction_data = np.array(prediction_data)
+        prediction_data = np.array(prediction_data, dtype=object)
         prediction_df = pd.DataFrame([prediction_data], columns=d.columns)
         d = pd.concat([d, prediction_df])
 
@@ -118,6 +113,8 @@ def main():
         model = LinearRegression()
 
         # Train the model on the training set
+        print(type(prediction_data))
+
         model.fit(x, y)
         predictions = model.predict(prediction_data)
 
