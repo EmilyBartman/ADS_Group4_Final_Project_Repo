@@ -36,7 +36,7 @@ def main():
 
     st.title('Movie Rating Predictor Application')
     
-    st.markdown('Welcome to the Movie Rating Predictor Application: the proactive approach to predicting your movies’ audience ratings before the critics!\')
+    st.markdown('Welcome to the Movie Rating Predictor Application: the proactive approach to predicting your movies’ audience ratings before the critics!')
     
     st.markdown('The problem is that movie ratings are too retroactive. We will create a dependable movie ratings prediction model to set movie makers’ and audience members\' expectations upon the release of a new film, before the critics.')
     st.markdown('This application will be useful for two primary reasons: \n\n\t\t(1) rating expectations impact film financing, and \n\t(2) rating expectations impact audience willingness to attend.')
@@ -46,7 +46,7 @@ def main():
     st.write(df.describe())
 
     st.header('Data Head')
-    st.markdown('Name: IMDB Movies Dataset\n Owner: HARSHIT SHANKHDHAR \n Sourced: IMDb \n Stored: Kaggle.com \n Date: Feb 01, 2021 \n URL: IMDb Dataset of the Top 1000 Movies & TV Shows \n')
+    st.markdown('Name: IMDB Movies Dataset\n Owner: HARSHIT SHANKHDHAR \n Sourced: IMDb \n Stored: Kaggle.com \n Date: Feb 01, 2021 \n URL: IMDb Dataset of the Top 1000 Movies & TV Shows')
     st.write(df.head())
 
     release_selection = st.number_input("Select the release year:", step=1, min_value=1920, max_value=2050)
