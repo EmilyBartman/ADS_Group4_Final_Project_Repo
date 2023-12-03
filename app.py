@@ -51,7 +51,6 @@ def main():
     st.markdown('URL: https://www.kaggle.com/datasets/harshitshankhdhar/imdb-dataset-of-top-1000-movies-and-tv-shows')
     st.write(df.head())
 
-
     st.header('Data Statistics')
     st.write(df.describe())
     st.markdown('Based on model analysis using SSE and MSE scores, we have employed a Linear Regression model trained on the IMDB dataset to the backend of our application.') 
