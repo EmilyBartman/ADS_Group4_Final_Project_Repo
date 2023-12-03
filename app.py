@@ -57,7 +57,7 @@ def main():
     st.markdown('Review findings by visiting https://colab.research.google.com/drive/1eXeMPPkGnWUJ5szIomcrde-Ouv7XAdOr?usp=sharing')
 
     st.header('Instructions and Disclaimer')  
-    st.write('Please input the following information below and we will use our trained Linear Regression model to predict your film rating.')
+    st.write('Please fill in the fields below with your film information and submit to generate your rating prediction using the trained Linear Regression model.')
     st.write('Note: The model was trained off free publicly available data scraped from IMDB in 2021 and rating predictions may slightly differ from critic and audience ratings. This tool is only meant to be a free tool to assist in setting expectations and does not guarantee anything.') 
 
     release_selection = st.number_input("Select the release year:", step=1, min_value=1920, max_value=2050)
