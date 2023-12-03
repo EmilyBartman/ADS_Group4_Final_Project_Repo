@@ -53,10 +53,10 @@ def main():
 
 
     st.header('Data Statistics')
+    st.write(df.describe())
+    st.write(df.plot.hexbin(x='Runtime', y='IMDB_Rating', gridsize=15))
     st.markdown('Based on model analysis using SSE and MSE scores, we have employed a Linear Regression model trained on the IMDB dataset to the backend of our application.') 
     st.markdown('Review findings by visiting https://colab.research.google.com/drive/1eXeMPPkGnWUJ5szIomcrde-Ouv7XAdOr?usp=sharing')
-    st.write(df.describe())
-    st.write(df.plot.hexbin(x='Runtime', y='IMDB_Rating', gridsize=15)
 
     st.header('Instructions and Disclaimer')  
     st.write('Please input the following information below and we will use our trained Linear Regression model to predict your film rating.')
