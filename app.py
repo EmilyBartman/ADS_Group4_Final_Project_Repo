@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import seaborn as sns
 import numpy as np
 import os
 from sklearn.linear_model import LinearRegression
