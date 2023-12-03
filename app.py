@@ -23,9 +23,8 @@ def main():
     genres = np.unique(genres)
     director = df["Director"].unique()
     director = np.sort(director)
-    stars = df["Star1"].append(df["Star2"])
-    stars = stars.append(df["Star3"])
-    stars = stars.append(df["Star4"]).unique()
+    
+    stars = pd.Series(pd.concat([df['Star1'], df['Star2'], df['Star3'], df['Star4']]).unique())
     stars = np.sort(stars)
 
     runtime = 0
