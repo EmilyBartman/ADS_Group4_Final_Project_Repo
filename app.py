@@ -35,15 +35,18 @@ def main():
     tobedropped = []
 
     st.title('Movie Rating Predictor Application')
-
-    st.markdown('Our problem is that movie ratings are too retroactive. We will create a dependable movie ratings prediction model to set movie makers’ and audience members\' expectations upon the release of a new film, before the critics.')
+    
+    st.markdown('Welcome to the Movie Rating Predictor Application: the proactive approach to predicting your movies’ audience ratings before the critics!\')
+    
+    st.markdown('The problem is that movie ratings are too retroactive. We will create a dependable movie ratings prediction model to set movie makers’ and audience members\' expectations upon the release of a new film, before the critics.')
     st.markdown('This application will be useful for two primary reasons: \n\n\t\t(1) rating expectations impact film financing, and \n\t(2) rating expectations impact audience willingness to attend.')
-    st.markdown('While researching current movie rating applications, most showed current ratings like RottenTomatoes, IMDb, and Metacritic created by viewers, but do not show predictions of movie ratings created by prediction models. However, there were many articles about utilizing prediction models with no application being created to interact with and allow usage of the models.')
+    st.markdown('While researching current movie rating applications, most showed current ratings like RottenTomatoes, IMDb, and Metacritic created by viewers, but do not show predictions of movie ratings created by prediction models. However, there were many articles about utilizing prediction models with no application being created to interact with and allow usage of the models. That is where we come in!')
 
     st.header('Data Statistics')
     st.write(df.describe())
 
     st.header('Data Head')
+    st.markdown('Name: IMDB Movies Dataset\n Owner: HARSHIT SHANKHDHAR \n Sourced: IMDb \n Stored: Kaggle.com \n Date: Feb 01, 2021 \n URL: IMDb Dataset of the Top 1000 Movies & TV Shows \n')
     st.write(df.head())
 
     release_selection = st.number_input("Select the release year:", step=1, min_value=1920, max_value=2050)
