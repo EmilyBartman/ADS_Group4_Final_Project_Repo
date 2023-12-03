@@ -55,7 +55,7 @@ def main():
     st.header('Data Statistics')
     st.write(df.describe())
     st.write(df.plot.hexbin(x='Runtime', y='IMDB_Rating', gridsize=15)
-    st.markdown('Based on a comparative analysis using SSE and MSE scores to decide on the backend predictive model, we have employed a Linear Regression model trained on the IMDB dataset on the backend of our application to predict your film rating. To review our findings and see all of the work mentioned above, visit https://colab.research.google.com/drive/1eXeMPPkGnWUJ5szIomcrde-Ouv7XAdOr?usp=sharing')
+    st.markdown('Based on a comparative analysis using SSE and MSE scores to decide on the backend predictive model, we have employed a Linear Regression model trained on the IMDB dataset on the backend of our application to predict your film rating. To review our findings, visit https://colab.research.google.com/drive/1eXeMPPkGnWUJ5szIomcrde-Ouv7XAdOr?usp=sharing')
 
     st.header('Instructions and Disclaimer')  
     st.write('Please input the following information below and we will use our trained Linear Regression model to predict your film rating.')
