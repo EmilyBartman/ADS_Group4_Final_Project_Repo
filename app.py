@@ -34,7 +34,7 @@ def main():
     star4 = []
     tobedropped = []
 
-    st.title('Top 1000 IMDb Movies & TV Shows')
+    st.title('Movie Rating Predictor Application')
 
     st.markdown('Our problem is that movie ratings are too retroactive. We will create a dependable movie ratings prediction model to set movie makers’ and audience members\' expectations upon the release of a new film, before the critics.')
     st.markdown('This application will be useful for two primary reasons: \n\n\t\t(1) rating expectations impact film financing, and \n\t(2) rating expectations impact audience willingness to attend.')
